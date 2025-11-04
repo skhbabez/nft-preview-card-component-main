@@ -1,0 +1,111 @@
+@layer reset, default, components;
+
+@layer reset {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    display: block;
+    max-inline-size: 100%;
+  }
+}
+
+@layer default {
+  @font-face {
+    font-family: "Outfit";
+    src: local("Outfit") url("fonts/Outfit-VariableFont_wght.ttf")
+      format("truetype");
+  }
+
+  :root {
+    --font-base: "Outfit", sans-serif;
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+    --blue-950: hsl(217, 54%, 11%);
+    --blue-900: hsl(216, 50%, 16%);
+    --blue-800: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --text-1: 1rem;
+    --text-2: 1.125rem;
+    --text-3: 1.375rem;
+    --line-1: 1.25;
+    --line-2: 1.45;
+    --spacing-0: 0;
+    --spacing-100: 0.5rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+  }
+}
+
+body {
+  background-color: var(--blue-950);
+  block-size: 100dvh;
+  font-family: var(--font-base);
+}
+
+@layer components {
+  .content {
+    display: grid;
+    place-content: center;
+    block-size: 100%;
+  }
+  .card {
+    border-radius: 0.9375rem;
+    background-color: var(--blue-900);
+    display: grid;
+    gap: var(--spacing-300);
+    padding: var(--spacing-300);
+    max-inline-size: 21.875rem;
+    inline-size: 100%;
+  }
+  .card .card__image {
+    border-radius: 0.5rem;
+  }
+
+  .card .card__content {
+    & h1 {
+      font-weight: 600;
+      line-height: var(--line-1);
+      font-size: var(--text-3);
+      color: var(--white);
+    }
+    & p {
+      margin-block-start: var(--spacing-200);
+      line-height: var(--line-2);
+      color: var(--blue-500);
+      font-size: var(--text-2);
+      font-weight: 300;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-container .info-container__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+    font-size: var(--text-1);
+    font-weight: 600;
+    line-height: var(--line-1);
+    &.info-container__item--cyan {
+      color: var(--cyan-400);
+    }
+    &.info-container__item--blue {
+      color: var(--blue-500);
+    }
+  }
+
+  .hruler {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--blue-500);
+  }
+}

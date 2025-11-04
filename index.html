@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <main class="content">
+      <article class="card">
+        <img
+          class="card__image"
+          src="images/image-equilibrium.jpg"
+          alt="Glass cube balancing on a corner"
+        />
+        <div class="card__content">
+          <h1>Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="info-container">
+          <span class="info-container__item info-container__item--cyan"
+            ><svg
+              width="11"
+              height="18"
+              viewBox="0 0 11 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.5 0L10.9961 9.16875L5.5 12.4312L0 9.16875L5.5 0ZM11 10.2165L5.5 18L0 10.2165L5.5 13.479L11 10.2165Z"
+                fill="currentcolor"
+              />
+            </svg>
+            0.041 ETH
+          </span>
+          <span class="info-container__item info-container__item--blue"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                opacity="0.01"
+                x="16"
+                y="16"
+                width="16"
+                height="16"
+                transform="rotate(180 16 16)"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.33331 7.99999C1.33331 4.3181 4.31808 1.33333 7.99998 1.33333C9.76809 1.33333 11.4638 2.03571 12.714 3.28595C13.9643 4.53619 14.6666 6.23188 14.6666 7.99999C14.6666 11.6819 11.6819 14.6667 7.99998 14.6667C4.31808 14.6667 1.33331 11.6819 1.33331 7.99999ZM7.99998 8.66666H10.6666C11.0348 8.66666 11.3333 8.36818 11.3333 7.99999C11.3333 7.6318 11.0348 7.33333 10.6666 7.33333H8.66665V5.33333C8.66665 4.96514 8.36817 4.66666 7.99998 4.66666C7.63179 4.66666 7.33331 4.96514 7.33331 5.33333V7.99999C7.33331 8.36818 7.63179 8.66666 7.99998 8.66666Z"
+                fill="currentcolor"
+              />
+            </svg>
+            3 days left
+          </span>
+        </div>
+        <hr class="hruler" />
+        <span> Creation of Jules Wyvern </span>
+      </article>
+    </main>
+  </body>
 </html>
