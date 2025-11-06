@@ -111,6 +111,7 @@
     line-height: var(--line-1);
     &.info-container__item--cyan {
       color: var(--cyan-400);
+      font-weight: 600;
     }
     &.info-container__item--blue {
       color: var(--blue-500);
