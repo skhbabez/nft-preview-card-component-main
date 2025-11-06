@@ -54,8 +54,9 @@
   }
 
   .content {
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     block-size: 100%;
   }
 
@@ -66,7 +67,7 @@
     gap: var(--spacing-300);
     padding: var(--spacing-300);
     max-inline-size: 21.875rem;
-    inline-size: 100%;
+    inline-size: max-content;
   }
 
   .card .card__image-container {
