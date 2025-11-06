@@ -75,6 +75,7 @@
     position: relative;
     &:hover::before {
       content: url("images/icon-view.svg");
+      pointer-events: none;
       position: absolute;
       inline-size: 100%;
       block-size: 100%;
