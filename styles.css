@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @layer reset, default, components;
 
 @layer reset {
@@ -20,12 +21,6 @@
 }
 
 @layer default {
-  @font-face {
-    font-family: "Outfit";
-    src: local("Outfit") url("/fonts/Outfit-VariableFont_wght.ttf")
-      format("truetype");
-  }
-
   :root {
     --font-base: "Outfit", sans-serif;
     --blue-500: hsl(215, 51%, 70%);
