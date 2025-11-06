@@ -68,8 +68,10 @@
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
-    &:hover::before {
+
+    &::before {
       content: url("images/icon-view.svg");
+      opacity: 0;
       pointer-events: none;
       position: absolute;
       inline-size: 100%;
@@ -77,6 +79,10 @@
       display: grid;
       place-items: center;
       background: rgb(from var(--cyan-400) r g b / 50.3%);
+      transition: opacity 200ms ease;
+    }
+    &:hover::before {
+      opacity: 1;
     }
   }
 
@@ -147,7 +153,11 @@
   }
 
   a.link {
+    transition: color 200ms ease-in-out;
     &:link {
+      color: var(--white);
+    }
+    &:visited {
       color: var(--white);
     }
 
