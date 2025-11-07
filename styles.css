@@ -81,7 +81,7 @@
       background: rgb(from var(--cyan-400) r g b / 50.3%);
       transition: opacity 200ms ease;
     }
-    &:hover::before {
+    &:is(:hover, :focus-visible)::before {
       opacity: 1;
     }
   }
@@ -154,6 +154,8 @@
 
   a.link {
     transition: color 200ms ease-in-out;
+
+    border-radius: 0.5rem;
     &:link {
       color: var(--white);
     }
@@ -161,8 +163,11 @@
       color: var(--white);
     }
 
-    &:is(:focus-visible, :hover, :active) {
+    &:is(:hover, :active, :focus-visible) {
       color: var(--cyan-400);
+    }
+    &:is(:focus-visible) {
+      outline: 1px solid var(--cyan-400);
     }
   }
 }
